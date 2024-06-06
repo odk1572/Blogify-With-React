@@ -18,6 +18,12 @@ Blogify is a user-friendly blogging platform built with modern web technologies 
 - **React Hook Form**: For efficient and scalable form handling.
 - **TinyMCE**: As the rich text editor for post creation and editing.
 
+### Frontend
+- **React.js**: For building a fast and interactive user interface.
+- **React Router**: To manage navigation and routing.
+- **React Hook Form**: For efficient and scalable form handling.
+- **TinyMCE**: As the rich text editor for post creation and editing.
+
 ### Backend
 - **Appwrite Services**: Backend services for handling authentication and database operations.
 
