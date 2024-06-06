@@ -19,6 +19,11 @@ export default function PostForm({ post }) {
     const userData = useSelector((state) => state.auth.userData);
 
     const submit = async (data) => {
+        if (!userData) {
+            console.error('User data is not available.');
+            return;
+        }
+
         if (post) {
             const file = data.image[0] ? await appwriteService.uploadFile(data.image[0]) : null;
 
@@ -69,6 +74,10 @@ export default function PostForm({ post }) {
 
         return () => subscription.unsubscribe();
     }, [watch, slugTransform, setValue]);
+
+    if (!userData) {
+        return <div>Loading...</div>;
+    }
 
     return (
         <form onSubmit={handleSubmit(submit)} className="flex flex-wrap">
