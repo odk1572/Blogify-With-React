@@ -15,14 +15,24 @@ function Login() {
     const login = async (data) => {
         setError("");
         try {
+            console.log("Attempting login with data:", data); 
             const session = await authService.login(data);
+            console.log("Session created:", session); 
             if (session) {
                 const userData = await authService.getCurrentUser();
-                if (userData) dispatch(authLogin(userData));
-                navigate("/");
+                console.log("User Data:", userData); 
+                if (userData) {
+                    dispatch(authLogin({ userData }));
+                    navigate("/");
+                } else {
+                    setError("Failed to retrieve user data.");
+                }
+            } else {
+                setError("Failed to create session.");
             }
         } catch (error) {
-            setError(error.message);
+            console.error("Login Error:", error); // Debug log
+            setError(error.message || "An error occurred during login.");
         }
     };
 
@@ -71,3 +81,4 @@ function Login() {
 }
 
 export default Login;
+
