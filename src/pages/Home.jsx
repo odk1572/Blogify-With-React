@@ -19,7 +19,7 @@ function Home() {
                 <Container>
                     <div className="flex flex-wrap">
                         <div className="p-2 w-full">
-                            <h1 className="text-2xl font-bold hover:text-gray-500">
+                            <h1 className="text-2xl font-bold ">
                                 Welcome to Blogify<br/> Please Login to read posts<br />Or Signup to create Account
                             </h1>
                         </div>
