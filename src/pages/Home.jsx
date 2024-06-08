@@ -29,7 +29,7 @@ function Home() {
         );
     }
     return (
-        <div className="w-full py-8 bg-gray-900">
+        <div className="w-full py-8 bg-teal-300">
             <Container>
                 <div className="flex flex-wrap justify-center">
                     {posts.map((post) => (
