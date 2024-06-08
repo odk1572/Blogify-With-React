@@ -70,9 +70,9 @@ Blogify is a user-friendly blogging platform built with modern web technologies 
 3. **Configure environment variables:**
     Create a `.env` file in the root of your project and add your Appwrite credentials:
     ```env
-    REACT_APP_APPWRITE_ENDPOINT=http://localhost/v1
-    REACT_APP_APPWRITE_PROJECT_ID=your_project_id
-    REACT_APP_APPWRITE_API_KEY=your_api_key
+    VITE_APPWRITE_ENDPOINT=http://localhost/v1
+    VITE_APPWRITE_PROJECT_ID=your_project_id
+    VITE_APPWRITE_API_KEY=your_api_key
     ```
 
 ### Deployment
