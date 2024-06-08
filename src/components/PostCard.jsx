@@ -14,7 +14,7 @@ function PostCard({ $id, title, featuredImage }) {
                 <div className="absolute inset-0 bg-gradient-to-b from-transparent to-gray-900 opacity-50"></div>
                 <div className="absolute bottom-0 left-0 p-4 text-white">
                     <h2 className="text-lg font-semibold mb-2">{title}</h2>
-                    <p className="text-sm opacity-75">Read more</p>
+                    <p className="text-sm opacity-75">ℝ𝕖𝕒𝕕 𝕞𝕠𝕣𝕖...</p>
                 </div>
             </div>
         </Link>
