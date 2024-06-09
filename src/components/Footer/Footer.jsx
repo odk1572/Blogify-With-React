@@ -46,8 +46,8 @@ function Footer() {
               <li className="mb-2">
                 <Link to="/" className="text-gray-700 hover:text-white transition duration-300">Contact Us</Link>
               </li>
-              <li>
-                <Link to="/" className="text-gray-700 hover:text-white transition duration-300">Customer Support</Link>
+              <li className="mb-2">
+                <a href="https://github.com/odk1572" target="_blank" rel="noopener noreferrer" className="text-gray-700 hover:text-white transition duration-300">GitHub</a>
               </li>
             </ul>
           </div>
