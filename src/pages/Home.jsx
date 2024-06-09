@@ -15,7 +15,7 @@ function Home() {
 
     if (posts.length === 0) {
         return (
-            <div className="w-full py-8 mt-4 bg-teal-900 text-center text-white">
+            <div className="w-full py-8 mt-4 bg-teal-800 text-center text-white">
                 <Container>
                     <div className="flex flex-wrap">
                         <div className="p-2 w-full">
@@ -29,7 +29,7 @@ function Home() {
         );
     }
     return (
-        <div className="w-full py-8 bg-gray-600">
+        <div className="w-full py-8 bg-teal-800">
             <Container>
                 <div className="flex flex-wrap justify-center">
                     {posts.map((post) => (
