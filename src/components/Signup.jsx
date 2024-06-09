@@ -35,7 +35,7 @@ function Signup() {
                     </span>
                 </div>
                 <h2 className="text-center text-2xl text-blue-900 font-bold leading-tight mb-4">Sign up to create an account</h2>
-                <p className="text-center text-sm text-blue-900 mb-4">
+                <p className="text-center text-sm text-blue-950 mb-4">
                     Already have an account?&nbsp;
                     <Link
                         to="/login"
