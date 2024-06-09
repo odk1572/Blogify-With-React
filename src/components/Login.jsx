@@ -43,7 +43,7 @@ function Login() {
                     <Logo width="100px"/>
                 </div>
                 <h2 className="text-center text-2xl text-blue-900 font-bold mb-4">Login to your account</h2>
-                <p className="text-center text-base text-blue-700 mb-6">
+                <p className="text-center text-base text-blue-950 mb-6">
                     Don't have an account?{' '}
                     <Link to="/signup" className="font-medium text-primary text-blue-900 hover:underline">
                         Sign Up
