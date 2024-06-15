@@ -15,11 +15,11 @@ function Home() {
 
     if (posts.length === 0) {
         return (
-            <div className="w-full py-8 mt-4 bg-gray-600 text-center text-white">
+            <div className="w-full py-8 mt-4 text-center text-white">
                 <Container>
                     <div className="flex flex-wrap">
                         <div className="p-2 w-full">
-                            <h1 className="text-2xl font-bold ">
+                            <h1 className="text-2xl font-bold hover:text-gray-500">
                                 Welcome to Blogify<br/> Please Login to read posts<br />Or Signup to create Account
                             </h1>
                         </div>
@@ -29,7 +29,7 @@ function Home() {
         );
     }
     return (
-        <div className="w-full py-8 bg-gray-600">
+        <div className="w-full py-8 bg-gradient-to-b from-yellow-400 to-white">
             <Container>
                 <div className="flex flex-wrap justify-center">
                     {posts.map((post) => (
@@ -44,3 +44,4 @@ function Home() {
 }
 
 export default Home;
+
