@@ -25,34 +25,34 @@ export default function PostForm({ post }) {
         }
 
         try {
-            if (post) {
-                const file = data.image[0] ? await appwriteService.uploadFile(data.image[0]) : null;
+            let file = null;
+            if (data.image?.[0]) {
+                file = await appwriteService.uploadFile(data.image[0]);
+            }
 
-                if (file) {
+            if (post) {
+                if (file && post.featuredImage) {
                     await appwriteService.deleteFile(post.featuredImage);
                 }
 
-                const dbPost = await appwriteService.updatePost(post.slug, {
+                const updatedPost = await appwriteService.updatePost(post.slug, {
                     ...data,
                     featuredImage: file ? file.$id : post.featuredImage,
                 });
 
-                if (dbPost) {
-                    navigate(`/post/${dbPost.$id}`);
+                if (updatedPost) {
+                    navigate(`/post/${updatedPost.$id}`);
                 }
             } else {
-                const file = await appwriteService.uploadFile(data.image[0]);
-
                 if (file) {
                     data.featuredImage = file.$id;
-                    const dbPost = await appwriteService.createPost({
+                    const newPost = await appwriteService.createPost({
                         ...data,
                         userId: userData.$id,
-                        slug: data.slug || "", // Optional slug, if needed
                     });
 
-                    if (dbPost) {
-                        navigate(`/post/${dbPost.$id}`);
+                    if (newPost) {
+                        navigate(`/post/${newPost.$id}`);
                     }
                 }
             }
@@ -114,7 +114,7 @@ export default function PostForm({ post }) {
                     accept="image/png, image/jpg, image/jpeg, image/gif"
                     {...register("image", { required: !post })}
                 />
-                {post && (
+                {post && post.featuredImage && (
                     <div className="w-full mb-4">
                         <img
                             src={appwriteService.getFilePreview(post.featuredImage)}
