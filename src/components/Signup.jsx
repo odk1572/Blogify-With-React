@@ -28,14 +28,14 @@ function Signup() {
 
     return (
         <div className="flex items-center justify-center h-screen">
-            <div className="w-full max-w-md bg-teal-600 shadow-lg rounded-lg p-8 border border-gray-300">
+            <div className="w-full max-w-md from-white to-yellow-400 shadow-lg rounded-lg p-8 border border-gray-300">
                 <div className="mb-4 flex justify-center">
                     <span className="inline-block w-full max-w-[100px]">
                         <Logo width="100%" />
                     </span>
                 </div>
                 <h2 className="text-center text-2xl text-blue-900 font-bold leading-tight mb-4">Sign up to create an account</h2>
-                <p className="text-center text-sm text-blue-950 mb-4">
+                <p className="text-center text-sm text-blue-900 mb-4">
                     Already have an account?&nbsp;
                     <Link
                         to="/login"
@@ -81,3 +81,4 @@ function Signup() {
 }
 
 export default Signup;
+
