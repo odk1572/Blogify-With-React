@@ -4,7 +4,7 @@ import Logo from '../Logo';
 
 function Footer() {
   return (
-    <footer className="bg-gradient-to-b from-yellow-400 to-yellow-400 ">
+    <footer className="bg-gradient-to-b from-white to-yellow-400 ">
       <div className="container mx-auto px-4 py-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div className="flex flex-col justify-between">
