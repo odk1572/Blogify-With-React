@@ -4,7 +4,7 @@ import Logo from '../Logo';
 
 function Footer() {
   return (
-    <footer className="bg-gradient-to-b from-teal-700 to-teal-200">
+    <footer className="bg-gradient-to-b from-yellow-400 to-yellow-400 ">
       <div className="container mx-auto px-4 py-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div className="flex flex-col justify-between">
@@ -47,8 +47,9 @@ function Footer() {
                 <Link to="/" className="text-gray-700 hover:text-white transition duration-300">Contact Us</Link>
               </li>
               <li className="mb-2">
-                <a href="https://github.com/odk1572" target="_blank" rel="noopener noreferrer" className="text-gray-700 hover:text-white transition duration-300">GitHub</a>
+                <a href="https://github.com/your-github-username" target="_blank" rel="noopener noreferrer" className="text-gray-700 hover:text-white transition duration-300">GitHub</a>
               </li>
+
             </ul>
           </div>
           <div className="flex flex-col">
