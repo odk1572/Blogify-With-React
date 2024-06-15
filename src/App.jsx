@@ -22,7 +22,7 @@ function App() {
   }, [])
   
   return !loading ? (
-    <div className='min-h-screen flex flex-col bg-gray-600 text-white'>
+    <div className='min-h-screen flex flex-col bg-gradient-to-b from-yellow-400 to-white text-white'>
       <Header />
       <main className="flex-grow">
         <Outlet />
@@ -33,3 +33,4 @@ function App() {
 }
 
 export default App
+
