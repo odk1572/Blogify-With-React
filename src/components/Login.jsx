@@ -15,12 +15,12 @@ function Login() {
     const login = async (data) => {
         setError("");
         try {
-            console.log("Attempting login with data:", data); 
+            console.log("Attempting login with data:", data); // Debug log
             const session = await authService.login(data);
-            console.log("Session created:", session); 
+            console.log("Session created:", session); // Debug log
             if (session) {
                 const userData = await authService.getCurrentUser();
-                console.log("User Data:", userData); 
+                console.log("User Data:", userData); // Debug log
                 if (userData) {
                     dispatch(authLogin({ userData }));
                     navigate("/");
@@ -38,12 +38,12 @@ function Login() {
 
     return (
         <div className="flex items-center justify-center min-h-screen">
-            <div className="w-full max-w-lg bg-teal-600 rounded-xl p-8 border border-gray-300">
+            <div className="w-full max-w-lg from-white to-yellow-400 rounded-xl p-8 border border-gray-300">
                 <div className="mb-6 flex justify-center">
                     <Logo width="100px"/>
                 </div>
                 <h2 className="text-center text-2xl text-blue-900 font-bold mb-4">Login to your account</h2>
-                <p className="text-center text-base text-blue-950 mb-6">
+                <p className="text-center text-base text-gray-600 mb-6">
                     Don't have an account?{' '}
                     <Link to="/signup" className="font-medium text-primary text-blue-900 hover:underline">
                         Sign Up
