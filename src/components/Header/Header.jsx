@@ -57,7 +57,7 @@ function Header() {
               >
                 <title>Menu</title>
                 <path
-                  fill-rule="evenodd"
+                  fillRule="evenodd"
                   d="M20 3H0V1h20v2zM0 10h20v-2H0v2zm0 7h20v-2H0v2z"
                 />
               </svg>
